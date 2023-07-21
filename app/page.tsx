@@ -13,8 +13,7 @@ export default function Home() {
 
 
     //Search states.
-    const [manufacturer, setManufacturer]
-        = useState("")
+    const [manufacturer, setManufacturer] = useState("")
     const [model, setModel] = useState("")
 
     //Filter states
@@ -42,12 +41,13 @@ export default function Home() {
             setLoading(false)
         }
     }
+
     useEffect(() => {
         getCars()
     }, [fuel, year, limit, manufacturer, model])
 
 
-    const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
+ const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
     <main className="overflow-hidden">
